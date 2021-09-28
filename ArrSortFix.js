@@ -8,18 +8,27 @@ Array.prototype.sort = function () {
   //         arr[j] = arr[i];
   //         arr[i] = buf;
   //       }
-  let swapped = false;
-  do {
-    swapped = false;
-    for (let i = 0; i < arr.length - 1; i++) {
-      if (arr[i] > arr[i + 1]) {
-        let temp = arr[i];
-        arr[i] = arr[i + 1];
-        arr[i + 1] = temp;
-        swapped = true;
-      }
+  //   let swapped = false;
+  //   do {
+  //     swapped = false;
+  //     for (let i = 0; i < arr.length - 1; i++) {
+  //       if (arr[i] > arr[i + 1]) {
+  //         let temp = arr[i];
+  //         arr[i] = arr[i + 1];
+  //         arr[i + 1] = temp;
+  //         swapped = true;
+  //       }
+  //     }
+  //   } while (swapped);
+
+  for (let i = 1; i < arr.length; i++) {
+    let numToIns = arr[i],
+      j;
+    for (j = i - 1; arr[j] > numToIns && j >= 0; j--) {
+      arr[j + 1] = arr[j];
     }
-  } while (swapped);
+    arr[j + 1] = numToIns;
+  }
 
   //   console.log(arr.length);
 
