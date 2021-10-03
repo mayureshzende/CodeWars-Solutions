@@ -1,5 +1,7 @@
-function add(...num1) {
-  console.log(num1);
-}
+const add = function (x) {
+  return function (y) {
+    return x + y;
+  };
+};
 
 console.log(add(2)(5));
