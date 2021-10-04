@@ -36,8 +36,27 @@ console.log(encrypt("This is a test!", 3));
 // encrypt(("This is a test!", 3), " ---- ", " Tah itse sits!");
 // encrypt(("This is a test!", 4), " ---- ", "This is a test!");
 // encrypt(("This is a test!", -1), "!!!!!", "This is a test!");
+encrypt(
+  ("This is a test!", -1),
+  "!!!!!",
+  "This is a asdsaddddddddddddddddddddddddddddddddddddd sadassssssasdddddddddasdaasdasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa test!"
+);
 
-function decrypt(encryptedText, n) {}
+function decrypt(encryptedText, n) {
+  if (!encryptedText || n <= 0) return encryptedText;
+  const ans = new Array(encryptedText.length);
+  while (n--) {
+    let j = 0;
+    for (let i = 1; i < ans.length; i += 2) {
+      ans[i] = encryptedText[j++];
+    }
+    for (let i = 0; i < ans.length; i += 2) {
+      ans[i] = encryptedText[j++];
+    }
+    encryptedText = ans.join("");
+  }
+  return encryptedText;
+}
 
 // encrypt(("This is a test!", 0), "This is a test!");
 // (encrypt("This is a test!", 1), "hsi  etTi sats!");
@@ -51,7 +70,6 @@ function decrypt(encryptedText, n) {}
 
 /* 
 smart solution for the encryption
-
 
 function encrypt(text, n) {
   console.log(text, n);
@@ -68,6 +86,7 @@ function encrypt(text, n) {
   }
   return text;
 }
+
 
 function decrypt(encryptedText, n) {
   if (!encryptedText || n <= 0) return encryptedText;

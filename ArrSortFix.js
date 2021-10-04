@@ -1,6 +1,7 @@
 Array.prototype.sort = function () {
   let buf,
     arr = this;
+  // bubble sort
   //   for (let j = 0; j < arr.length - 1; j++)
   //     for (let i = j + 1; i < arr.length; i++)
   //       if (arr[j] > arr[i]) {
@@ -20,7 +21,8 @@ Array.prototype.sort = function () {
   //       }
   //     }
   //   } while (swapped);
-
+  // ---------------
+  // indsertion sort
   for (let i = 1; i < arr.length; i++) {
     let numToIns = arr[i],
       j;
@@ -34,10 +36,11 @@ Array.prototype.sort = function () {
 
   return arr;
 };
+console.log([9, 7, 2, 4, 5, 3, 6, 8, 1].sort(), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
 
 /*
 function mergeSort(array) {
-  if (array.len < 2) {
+  if (array.length  < 2) {
     return array;
   }
 
@@ -64,28 +67,4 @@ function merge(left, right) {
     }
   }
   return res.concat(left.slice(inleft), right.slice(inright));
-} */
-
-/* function compare(a, b) {
-  if (a < b) {
-    return -1;
-  } else if (a > b) {
-    return 1;
-  } else {
-    return 0;
-  }
-} */
-
-console.log([9, 7, 2, 4, 5, 3, 6, 8, 1].sort(), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
-
-/* 
-Array.prototype.sort = function () {
-  for(var i=0;i<this.length-1;i++){
-    for(var j=this.length-1;j>=i;j--){
-      if(this[j]>this[j+1]){
-        [this[j],this[j+1]]=[this[j+1],this[j]];
-      }
-    }
-  }
-  return this;
 } */

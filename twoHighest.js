@@ -52,4 +52,4 @@ console.log(twoHighest([15, 20, 20, 17]));
 //   ])
 // );
 
-console.log([1].slice(0, 2));
+console.log([1, 2].slice(0, 2));

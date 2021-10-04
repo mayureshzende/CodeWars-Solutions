@@ -1,6 +1,6 @@
 function logicalCalc(array, op) {
   //your code here
-  //   console.log(" === ", array.includes(false));
+  //   console.log(" ===  ", array.includes(false));
   let res = true;
 
   for (let i = 0; i < array.length; i++) {
