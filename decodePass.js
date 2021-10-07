@@ -1,4 +1,5 @@
 function decodePass(passArr, bin) {
+  let Is = "";
   let str = BinaryToStr(bin);
   if (passArr.includes(str)) return str;
   return false;
@@ -11,7 +12,7 @@ function BinaryToStr(str) {
     .join("");
   //   console.log(typeof output);
 }
-
+// 1234567890
 // console.log(
 //   decodePass(
 //     ["password123", "admin", "admin1"],
