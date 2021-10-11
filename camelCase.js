@@ -1,5 +1,3 @@
-// * [A - Z]
-
 function solution(string) {
   //   console.log(string.split("[A-Z]*"));
   //   return string.replace(/([A-Z])/g, " $1");
