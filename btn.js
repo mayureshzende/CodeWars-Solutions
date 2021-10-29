@@ -1,3 +1,0 @@
-function increment() {
-  btn.innerHTML++;
-}
