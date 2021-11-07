@@ -1,7 +1,6 @@
 function expressionMatter(a, b, c) {
-  let max = Math.max(a, b, c);
-  console.log("mac is ", max * (a + b + c - max));
-  return 0; // highest achievable result
+  return Math.max((a + b) * c, a * (b + c), a + b + c, a * b * c);
+  // highest achievable result
 }
 
 console.log(expressionMatter(2, 1, 2), 6);
