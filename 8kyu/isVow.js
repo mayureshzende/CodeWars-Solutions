@@ -12,7 +12,7 @@ function isVow(a) {
   return res;
 }
 // const isVow = a => a.map(x=>'aeiou'.includes(y=String.fromCharCode(x)) ? y : x)
-
+console.log(9766 * 6.75);
 console.log(isVow([101, 121, 110, 113, 113, 103, 121, 121, 101, 107, 103]), [
   "e",
   121,
