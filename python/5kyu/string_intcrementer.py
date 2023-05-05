@@ -19,6 +19,7 @@ Attention: If the number has leading zeros the amount of digits should be consid
 
 """
 
+
 def increment_string1(strng):
     if len(strng) == 0:
         return '1'
