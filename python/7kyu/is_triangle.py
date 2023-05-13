@@ -1,0 +1,1 @@
+triangle=lambda a,b,c:a+b > c > abs(a-b)
